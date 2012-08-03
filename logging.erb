@@ -1,0 +1,8 @@
+; logging
+access.log = /home/<%= app_user %>/php/log/<%= app_name %>.access.log
+access.format = %R - %u %t "%m %r%Q%q" %s %f %{mili}d %{kilo}M %C%%
+slowlog = /home/<%= app_user %>/php/log/<%= app_name %>.slow.log
+
+request_slowlog_timeout = 2s
+
+rlimit_files = 32768 ; required
